@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Salary" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2a5c6abd-47f0-4d8f-b09a-229c95f180bf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from Salary]]>
+	</queryString>
+	<field name="ID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Designation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Today" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bsal" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="leaves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OT" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Performance" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Advance" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EPF" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gross" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Deduction" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NetSal" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="244" y="0" width="319" height="74" uuid="7f83e37c-86ba-4ee1-a22c-15c4719440ca"/>
+				<imageExpression><![CDATA["C:\\Users\\User\\Desktop\\SLIIT\\Micro Electronics\\src\\image\\Logov1.png"]]></imageExpression>
+			</image>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="667" y="0" width="134" height="31" uuid="c65e979a-d202-4ff1-b95a-304b24f69855"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="331" y="0" width="163" height="35" uuid="f4396ac5-d187-4e76-8c19-6dd8e387e68c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Salary Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="66" y="0" width="47" height="20" uuid="74e2e647-6eb3-45fa-9b6b-9711dc35c5d9"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="0" width="43" height="20" uuid="af1b4dba-ff22-4dc4-8952-6827471aadf0"/>
+				<text><![CDATA[Today]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="43" height="20" uuid="2d086d36-0cba-4813-a069-d90339fd9fec"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="0" width="43" height="20" uuid="bf46d5c6-e64d-4af4-940e-55f9905d6881"/>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="0" width="43" height="20" uuid="e5758675-d2ea-4139-84ce-2b3bf1a6e7a4"/>
+				<text><![CDATA[Bsal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="0" width="43" height="20" uuid="bcfccaf0-e986-41aa-a01d-24e2af62ae1f"/>
+				<text><![CDATA[Gross]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="576" y="0" width="43" height="20" uuid="07c5c21f-37e5-4917-b741-535527c601f9"/>
+				<text><![CDATA[Deduction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="665" y="0" width="43" height="20" uuid="cacc4682-b61c-4d86-9c91-ea2170744725"/>
+				<text><![CDATA[NetSal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="736" y="0" width="43" height="20" uuid="dd771733-4fdb-4893-a690-48ffa19a6ff8"/>
+				<text><![CDATA[month]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="66" y="0" width="47" height="20" uuid="0d283df9-e610-489c-b470-e511bf264f73"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="0" width="43" height="20" uuid="b77d01af-1b6d-4f17-ba5c-f8052c6c4477"/>
+				<textFieldExpression><![CDATA[$F{Today}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="43" height="20" uuid="59b95de6-da9c-401f-bedd-c35e0ba716cb"/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="0" width="43" height="20" uuid="00d9e3fb-844f-47d4-8876-165e4e2e949c"/>
+				<textFieldExpression><![CDATA[$F{Designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="43" height="20" uuid="004832e6-71a7-4664-8e08-065b726fd464"/>
+				<textFieldExpression><![CDATA[$F{Bsal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="0" width="43" height="20" uuid="9b9e1774-9569-4d50-8cb8-af608b0f5b1d"/>
+				<textFieldExpression><![CDATA[$F{Gross}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="576" y="0" width="43" height="20" uuid="e39e87ff-0225-4dde-8a0c-1c2d4808e599"/>
+				<textFieldExpression><![CDATA[$F{Deduction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="647" y="0" width="43" height="20" uuid="fce7d330-c3dc-44e2-afb7-a1f8b114dbf7"/>
+				<textFieldExpression><![CDATA[$F{NetSal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="736" y="0" width="43" height="20" uuid="e30659f4-a1eb-48db-94b5-864ea88dc9f1"/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testj" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1805a77-42f8-418a-ba6f-d3ad86fee857">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Micro"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from salesreport]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salesreport"/>
+	</field>
+	<field name="Sales" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Sales"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salesreport"/>
+	</field>
+	<field name="Deduction" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Deduction"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salesreport"/>
+	</field>
+	<field name="Profit" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Profit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salesreport"/>
+	</field>
+	<field name="Month" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Month"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salesreport"/>
+	</field>
+	<field name="Year" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salesreport"/>
+	</field>
+	<group name="Id">
+		<groupExpression><![CDATA[$F{Id}]]></groupExpression>
+	</group>
+	<group name="Sales">
+		<groupExpression><![CDATA[$F{Sales}]]></groupExpression>
+	</group>
+	<group name="Deduction">
+		<groupExpression><![CDATA[$F{Deduction}]]></groupExpression>
+	</group>
+	<group name="Profit">
+		<groupExpression><![CDATA[$F{Profit}]]></groupExpression>
+	</group>
+	<group name="Month">
+		<groupExpression><![CDATA[$F{Month}]]></groupExpression>
+	</group>
+	<group name="Year">
+		<groupExpression><![CDATA[$F{Year}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<image>
+				<reportElement x="80" y="-10" width="370" height="96" uuid="5f548b29-2f64-4ea8-adbd-8b55cf81342b"/>
+				<imageExpression><![CDATA["C:/Users/User/Desktop/SLIIT/Micro Electronics/src/image/Logov1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="220" y="5" width="100" height="25" uuid="8fdf49cd-f26b-4404-a3a5-a6dd5343aa23"/>
+				<textElement>
+					<font fontName="SansSerif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sales Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="40" width="120" height="30" uuid="76cb4790-a9bc-47be-86f3-727b7540ab01"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Delkada road,Matara]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="40" width="100" height="30" uuid="17d405e9-49a7-454d-acd5-8deb727cd639"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[T.P. - 0717743824]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="13" width="60" height="30" uuid="5360d43e-f2e3-4986-ad40-0e6cd3707a3c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="13" width="70" height="30" uuid="2557e87b-d940-43a0-9ccc-8824777502e8"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="13" width="70" height="30" uuid="af455c4e-6ce6-494a-ba65-ec438255b576"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Deduction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="13" width="60" height="30" uuid="4257d780-fe7c-4e8c-80b6-0de9b6afd134"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Profit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="13" width="70" height="30" uuid="a509ed75-29d6-456c-a584-3d60804a5e6b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="13" width="80" height="30" uuid="ff28a5a0-6c41-4a8f-a0fb-acf324550f57"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="4" width="60" height="30" uuid="f4524bf3-0744-47f3-99ac-efe900b46ae9"/>
+				<textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="4" width="70" height="30" uuid="4409b1e3-35a5-4fda-a117-8c101d93797d"/>
+				<textFieldExpression><![CDATA[$F{Sales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="4" width="70" height="30" uuid="85c92ac3-4c0b-47ec-a257-63c0c3c31900"/>
+				<textFieldExpression><![CDATA[$F{Deduction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="4" width="60" height="30" uuid="a306610d-b04c-4130-b25b-b2f46230d483"/>
+				<textFieldExpression><![CDATA[$F{Profit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="4" width="70" height="30" uuid="5ed02ff8-ada4-413b-bdea-3ede9e880c1e"/>
+				<textFieldExpression><![CDATA[$F{Month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="4" width="80" height="30" uuid="cea84056-814c-4312-94ad-d1264c8bacf2"/>
+				<textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="238" splitType="Stretch"/>
+	</summary>
+</jasperReport>

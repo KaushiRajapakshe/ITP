@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Payment Report" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4a8b659c-4669-4606-bf03-75a8bc0e7c85">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Micro"/>
+	<parameter name="date" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *
+from bill
+where billDate = $P{date}]]>
+	</queryString>
+	<field name="billNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalAmount" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="discountAll" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="netSales" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="billDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paymentMode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="netSales" class="java.lang.Float" resetType="Group" resetGroup="Sales" calculation="Sum">
+		<variableExpression><![CDATA[$F{netSales}]]></variableExpression>
+	</variable>
+	<group name="Sales">
+		<groupExpression><![CDATA[$F{month}]]></groupExpression>
+		<groupHeader>
+			<band height="2"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="8"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<image>
+				<reportElement x="145" y="10" width="274" height="59" uuid="c8ea3aee-52c3-441c-8656-66aaa5ce3c12"/>
+				<imageExpression><![CDATA["C:\\Users\\User\\Desktop\\SLIIT\\Micro Electronics\\src\\image\\Logov1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="6" width="172" height="20" uuid="182edc2c-21aa-43bf-a9c9-aca995537b6c"/>
+				<textElement>
+					<font fontName="Book Antiqua" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daily Payment Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="26" width="333" height="15" uuid="43d91854-f2db-401d-b6ea-708a05f30d8b"/>
+				<text><![CDATA[Delkada Road, Matara                             T. P. - 0717743824]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="77" height="20" uuid="dcd4dbd5-55d5-4e85-a772-18eb578c7a7e"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Payment Mode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="0" width="77" height="20" uuid="6f2511d7-a38a-4832-9634-625607895836"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="0" width="77" height="20" uuid="ca404c85-4896-46d1-90f5-e7c6eea6b2c0"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Net Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="0" width="77" height="20" uuid="4ba6e326-a0a9-4d34-b95d-a2f672447deb"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="0" width="77" height="20" uuid="04716cec-af53-48cd-bda9-9a7b8ebf2d77"/>
+				<textFieldExpression><![CDATA[$F{paymentMode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="0" width="77" height="20" uuid="0dac9b1a-6d8d-49c0-b2af-f8492e1e28ef"/>
+				<textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="0" width="77" height="20" uuid="a64981e0-fbb6-4430-a539-8009d9d958c3"/>
+				<textFieldExpression><![CDATA[$F{netSales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="0" width="77" height="20" uuid="16dc8cc8-0a23-4137-b6e8-6ca54fc28f93"/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="444" y="21" width="100" height="20" uuid="8350a1ec-5cf4-49f8-b0f7-c5ba51d73c8f"/>
+				<textFieldExpression><![CDATA[$V{netSales}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="333" y="21" width="100" height="20" uuid="f710c6d9-930a-4a04-b4b4-bbaccaa87456"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Sales : ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="222" y="24" width="80" height="20" uuid="61cf97e1-9c4c-497d-8087-fdba762e1816"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="302" y="24" width="40" height="20" uuid="3f069319-43e2-461a-8f64-16964949b8bb"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="33" splitType="Stretch"/>
+	</summary>
+</jasperReport>
